@@ -1,0 +1,1089 @@
+{
+    "configs": {
+        "slug": "configs",
+        "table": {
+            "name": "configs",
+            "pk": "id",
+            "verbose": "系统设置"
+        },
+        "columns": [
+            {
+                "name": "id",
+                "verbose": "id",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": false
+                }
+            },
+            {
+                "name": "total_reward_threshold",
+                "verbose": "每日抽奖总额分界",
+                "control": {
+                    "number": true
+                },
+                "type": "bigint(19)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "referer_reward_rate",
+                "verbose": "推荐者分成比例",
+                "control": {
+                    "number": true
+                },
+                "type": "tinyint(4)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "bitcoin_price",
+                "verbose": "比特币价格",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": false
+                }
+            },
+            {
+                "name": "updated_at",
+                "verbose": "updated_at",
+                "control": {
+                    "text": true
+                },
+                "type": "datetime",
+                "allowNull": false,
+                "defaultValue": "CURRENT_TIMESTAMP",
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": false
+                }
+            },
+            {
+                "name": "created_at",
+                "verbose": "created_at",
+                "control": {
+                    "text": true
+                },
+                "type": "datetime",
+                "allowNull": false,
+                "defaultValue": "CURRENT_TIMESTAMP",
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": false
+                }
+            }
+        ],
+        "mainview": {
+            "show": true
+        },
+        "listview": {
+            "order": {},
+            "page": 25
+        },
+        "editview": {
+            "readonly": false
+        }
+    },
+    "incomes": {
+        "slug": "incomes",
+        "table": {
+            "name": "incomes",
+            "pk": "id",
+            "verbose": "用户收入"
+        },
+        "columns": [
+            {
+                "name": "id",
+                "verbose": "id",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "user_id",
+                "verbose": "user_id",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "referer_id",
+                "verbose": "referer_id",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "type",
+                "verbose": "类型(0:抽奖,1:offerwall)",
+                "control": {
+                    "select": true,
+                    "options": [
+                        {
+                            "0": "抽奖"
+                        },
+                        {
+                            "1": "Offerwall"
+                        }
+                    ]
+                },
+                "type": "int(2)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "income",
+                "verbose": "收入数额",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "referer_income",
+                "verbose": "推荐者收入数额",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "created_at",
+                "verbose": "created_at",
+                "control": {
+                    "text": true
+                },
+                "type": "datetime",
+                "allowNull": false,
+                "defaultValue": "CURRENT_TIMESTAMP",
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            }
+        ],
+        "mainview": {
+            "show": true
+        },
+        "listview": {
+            "order": {},
+            "page": 25
+        },
+        "editview": {
+            "readonly": true
+        }
+    },
+    "reward_rates": {
+        "slug": "reward_rates",
+        "table": {
+            "name": "reward_rates",
+            "pk": "id",
+            "verbose": "抽奖概率"
+        },
+        "columns": [
+            {
+                "name": "id",
+                "verbose": "id",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": false
+                }
+            },
+            {
+                "name": "min",
+                "verbose": "最低",
+                "control": {
+                    "number": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "max",
+                "verbose": "最高",
+                "control": {
+                    "number": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "weight",
+                "verbose": "权重",
+                "control": {
+                    "number": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "type",
+                "verbose": "类型",
+                "control": {
+                    "select": true,
+                    "options": [
+                        {
+                            "reward-today-less": "低于每日抽奖总额分界"
+                        },
+                        {
+                            "reward-today-more": "高于每日抽奖总额分界"
+                        }
+                    ]
+                },
+                "type": "varchar(63)",
+                "allowNull": false,
+                "defaultValue": "",
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "updated_at",
+                "verbose": "updated_at",
+                "control": {
+                    "text": true
+                },
+                "type": "datetime",
+                "allowNull": false,
+                "defaultValue": "CURRENT_TIMESTAMP",
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": false
+                }
+            },
+            {
+                "name": "created_at",
+                "verbose": "created_at",
+                "control": {
+                    "text": true
+                },
+                "type": "datetime",
+                "allowNull": false,
+                "defaultValue": "CURRENT_TIMESTAMP",
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": false
+                }
+            }
+        ],
+        "mainview": {
+            "show": true
+        },
+        "listview": {
+            "order": {},
+            "page": 25
+        },
+        "editview": {
+            "readonly": false
+        }
+    },
+    "total_rewards": {
+        "slug": "total_rewards",
+        "table": {
+            "name": "total_rewards",
+            "pk": "id",
+            "verbose": "每日总抽奖量(包含推荐者分成)"
+        },
+        "columns": [
+            {
+                "name": "id",
+                "verbose": "id",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "total",
+                "verbose": "total",
+                "control": {
+                    "text": true
+                },
+                "type": "bigint(19)",
+                "allowNull": false,
+                "defaultValue": "0",
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "created_at",
+                "verbose": "created_at",
+                "control": {
+                    "text": true
+                },
+                "type": "date",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            }
+        ],
+        "mainview": {
+            "show": true
+        },
+        "listview": {
+            "order": {},
+            "page": 25
+        },
+        "editview": {
+            "readonly": true
+        }
+    },
+    "users": {
+        "slug": "users",
+        "table": {
+            "name": "users",
+            "pk": "id",
+            "verbose": "用户"
+        },
+        "columns": [
+            {
+                "name": "id",
+                "verbose": "id",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": false
+                }
+            },
+            {
+                "name": "email",
+                "verbose": "邮箱地址",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(255)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": false
+                }
+            },
+            {
+                "name": "bitcoin_address",
+                "verbose": "比特币地址",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(63)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": false
+                }
+            },
+            {
+                "name": "status",
+                "verbose": "用户状态",
+                "control": {
+                    "select": true,
+                    "options": [
+                        {
+                            "unverified": "未验证"
+                        },
+                        {
+                            "verified": "已验证"
+                        },
+                        {
+                            "banned": "禁用"
+                        }
+                    ]
+                },
+                "type": "varchar(15)",
+                "allowNull": false,
+                "defaultValue": "unverified",
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "balance",
+                "verbose": "账户余额(聪)",
+                "control": {
+                    "text": true
+                },
+                "type": "bigint(19)",
+                "allowNull": false,
+                "defaultValue": "0",
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": false
+                }
+            },
+            {
+                "name": "min_withdrawal_amount",
+                "verbose": "最低提现数额(聪)",
+                "control": {
+                    "number": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": "100000",
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "reward_interval",
+                "verbose": "抽奖间隔(秒)",
+                "control": {
+                    "number": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": "900",
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "rewarded_at",
+                "verbose": "上次抽奖",
+                "control": {
+                    "text": true
+                },
+                "type": "datetime",
+                "allowNull": false,
+                "defaultValue": "1970-01-01 00:00:01",
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": false
+                }
+            },
+            {
+                "name": "referer_id",
+                "verbose": "推荐者 id",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": "0",
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": false
+                }
+            },
+            {
+                "name": "updated_at",
+                "verbose": "updated_at",
+                "control": {
+                    "text": true
+                },
+                "type": "datetime",
+                "allowNull": false,
+                "defaultValue": "CURRENT_TIMESTAMP",
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": false
+                }
+            },
+            {
+                "name": "created_at",
+                "verbose": "created_at",
+                "control": {
+                    "text": true
+                },
+                "type": "datetime",
+                "allowNull": false,
+                "defaultValue": "CURRENT_TIMESTAMP",
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": false
+                }
+            }
+        ],
+        "mainview": {
+            "show": true
+        },
+        "listview": {
+            "order": {},
+            "page": 25
+        },
+        "editview": {
+            "readonly": false
+        }
+    },
+    "withdrawals": {
+        "slug": "withdrawals",
+        "table": {
+            "name": "withdrawals",
+            "pk": "id",
+            "verbose": "提现"
+        },
+        "columns": [
+            {
+                "name": "id",
+                "verbose": "id",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "user_id",
+                "verbose": "user_id",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "bitcoin_address",
+                "verbose": "比特币地址",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(63)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "amount",
+                "verbose": "提现数额(聪)",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "status",
+                "verbose": "提现状态(0:等待处理,1:处理中,2:已处理)",
+                "control": {
+                    "text": true
+                },
+                "type": "int(2)",
+                "allowNull": false,
+                "defaultValue": "0",
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "transaction_hash",
+                "verbose": "交易Hash",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(127)",
+                "allowNull": false,
+                "defaultValue": "",
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "updated_at",
+                "verbose": "updated_at",
+                "control": {
+                    "text": true
+                },
+                "type": "datetime",
+                "allowNull": false,
+                "defaultValue": "CURRENT_TIMESTAMP",
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "created_at",
+                "verbose": "created_at",
+                "control": {
+                    "text": true
+                },
+                "type": "datetime",
+                "allowNull": false,
+                "defaultValue": "CURRENT_TIMESTAMP",
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            }
+        ],
+        "mainview": {
+            "show": true
+        },
+        "listview": {
+            "order": {},
+            "page": 25
+        },
+        "editview": {
+            "readonly": true
+        }
+    },
+    "auth_tokens": {
+        "slug": "auth_tokens",
+        "table": {
+            "name": "auth_tokens",
+            "pk": "id",
+            "verbose": "auth_tokens"
+        },
+        "columns": [
+            {
+                "name": "id",
+                "verbose": "id",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "user_id",
+                "verbose": "user_id",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "auth_token",
+                "verbose": "auth_token",
+                "control": {
+                    "text": true
+                },
+                "type": "char(36)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "created_at",
+                "verbose": "created_at",
+                "control": {
+                    "text": true
+                },
+                "type": "datetime",
+                "allowNull": false,
+                "defaultValue": "CURRENT_TIMESTAMP",
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            }
+        ],
+        "mainview": {
+            "show": false
+        },
+        "listview": {
+            "order": {},
+            "page": 25
+        },
+        "editview": {
+            "readonly": true
+        }
+    },
+    "goose_db_version": {
+        "slug": "goose_db_version",
+        "table": {
+            "name": "goose_db_version",
+            "pk": "id",
+            "verbose": "goose_db_version"
+        },
+        "columns": [
+            {
+                "name": "id",
+                "verbose": "id",
+                "control": {
+                    "text": true
+                },
+                "type": "bigint(20) unsigned",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "version_id",
+                "verbose": "version_id",
+                "control": {
+                    "text": true
+                },
+                "type": "bigint(20)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "is_applied",
+                "verbose": "is_applied",
+                "control": {
+                    "text": true
+                },
+                "type": "tinyint(1)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "tstamp",
+                "verbose": "tstamp",
+                "control": {
+                    "text": true
+                },
+                "type": "timestamp",
+                "allowNull": true,
+                "defaultValue": "CURRENT_TIMESTAMP",
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            }
+        ],
+        "mainview": {
+            "show": false
+        },
+        "listview": {
+            "order": {},
+            "page": 25
+        },
+        "editview": {
+            "readonly": true
+        }
+    },
+    "sessions": {
+        "slug": "sessions",
+        "table": {
+            "name": "sessions",
+            "pk": "id",
+            "verbose": "sessions"
+        },
+        "columns": [
+            {
+                "name": "id",
+                "verbose": "id",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "user_id",
+                "verbose": "user_id",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "token",
+                "verbose": "token",
+                "control": {
+                    "text": true
+                },
+                "type": "char(36)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "type",
+                "verbose": "type",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(63)",
+                "allowNull": false,
+                "defaultValue": "",
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "updated_at",
+                "verbose": "updated_at",
+                "control": {
+                    "text": true
+                },
+                "type": "datetime",
+                "allowNull": false,
+                "defaultValue": "CURRENT_TIMESTAMP",
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            }
+        ],
+        "mainview": {
+            "show": false
+        },
+        "listview": {
+            "order": {},
+            "page": 25
+        },
+        "editview": {
+            "readonly": true
+        }
+    }
+}
