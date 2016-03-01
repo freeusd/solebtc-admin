@@ -1,6 +1,7 @@
 solebtc-admin
 ===
 
-Install admin:
+How to deploy
+----
 
-npm install -g git+https://git@github.com:freeusd/express-admin.git --verbose
+Refer to fabfile.py
