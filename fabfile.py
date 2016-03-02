@@ -5,7 +5,7 @@ from fabric.operations import run
 env.shell = '/bin/bash -l -c'
 env.user = 'd'
 env.roledefs.update({
-    'staging': ['staging.admin.solebtc.com'],
+    'staging': ['stagingadmin.solebtc.com'],
     'production': ['admin.solebtc.com']
 })
 
