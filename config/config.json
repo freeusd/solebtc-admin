@@ -1,0 +1,15 @@
+{
+    "mysql": {
+        "database": "sole_prod",
+        "user": "d",
+        "password": "d"
+    },
+    "server": {
+        "port": 3000
+    },
+    "app": {
+        "layouts": true,
+        "themes": true,
+        "languages": true
+    }
+}
