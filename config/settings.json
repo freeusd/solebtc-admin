@@ -27,9 +27,9 @@
                 "name": "total_reward_threshold",
                 "verbose": "每日抽奖总额分界",
                 "control": {
-                    "number": true
+                    "text": true
                 },
-                "type": "bigint(19)",
+                "type": "decimal(19,8)",
                 "allowNull": false,
                 "defaultValue": null,
                 "listview": {
@@ -43,32 +43,16 @@
                 "name": "referer_reward_rate",
                 "verbose": "推荐者分成比例",
                 "control": {
-                    "number": true
-                },
-                "type": "tinyint(4)",
-                "allowNull": false,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "bitcoin_price",
-                "verbose": "比特币价格",
-                "control": {
                     "text": true
                 },
-                "type": "int(11)",
+                "type": "decimal(4,4)",
                 "allowNull": false,
                 "defaultValue": null,
                 "listview": {
                     "show": true
                 },
                 "editview": {
-                    "show": false
+                    "show": true
                 }
             },
             {
@@ -185,7 +169,7 @@
                         }
                     ]
                 },
-                "type": "int(2)",
+                "type": "tinyint(4)",
                 "allowNull": false,
                 "defaultValue": null,
                 "listview": {
@@ -201,7 +185,7 @@
                 "control": {
                     "text": true
                 },
-                "type": "int(11)",
+                "type": "decimal(19,8)",
                 "allowNull": false,
                 "defaultValue": null,
                 "listview": {
@@ -217,7 +201,7 @@
                 "control": {
                     "text": true
                 },
-                "type": "int(11)",
+                "type": "decimal(19,8)",
                 "allowNull": false,
                 "defaultValue": null,
                 "listview": {
@@ -283,9 +267,9 @@
                 "name": "min",
                 "verbose": "最低",
                 "control": {
-                    "number": true
+                    "text": true
                 },
-                "type": "int(11)",
+                "type": "decimal(19,8)",
                 "allowNull": false,
                 "defaultValue": null,
                 "listview": {
@@ -299,9 +283,9 @@
                 "name": "max",
                 "verbose": "最高",
                 "control": {
-                    "number": true
+                    "text": true
                 },
-                "type": "int(11)",
+                "type": "decimal(19,8)",
                 "allowNull": false,
                 "defaultValue": null,
                 "listview": {
@@ -425,7 +409,7 @@
                 "control": {
                     "text": true
                 },
-                "type": "bigint(19)",
+                "type": "decimal(19,8)",
                 "allowNull": false,
                 "defaultValue": "0",
                 "listview": {
@@ -504,8 +488,8 @@
                 }
             },
             {
-                "name": "bitcoin_address",
-                "verbose": "比特币地址",
+                "name": "address",
+                "verbose": "提现地址",
                 "control": {
                     "text": true
                 },
@@ -548,11 +532,11 @@
             },
             {
                 "name": "balance",
-                "verbose": "账户余额(聪)",
+                "verbose": "账户余额",
                 "control": {
                     "text": true
                 },
-                "type": "bigint(19)",
+                "type": "decimal(19,8)",
                 "allowNull": false,
                 "defaultValue": "0",
                 "listview": {
@@ -563,14 +547,62 @@
                 }
             },
             {
-                "name": "min_withdrawal_amount",
-                "verbose": "最低提现数额(聪)",
+                "name": "total_income",
+                "verbose": "总收入",
                 "control": {
-                    "number": true
+                    "text": true
                 },
-                "type": "int(11)",
+                "type": "decimal(32,8)",
                 "allowNull": false,
-                "defaultValue": "100000",
+                "defaultValue": "0.00000000",
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": false
+                }
+            },
+            {
+                "name": "referer_total_income",
+                "verbose": "推荐者收入",
+                "control": {
+                    "text": true
+                },
+                "type": "decimal(32,8)",
+                "allowNull": false,
+                "defaultValue": "0.00000000",
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": false
+                }
+            },
+            {
+                "name": "total_income_from_referees",
+                "verbose": "佣金",
+                "control": {
+                    "text": true
+                },
+                "type": "decimal(32,8)",
+                "allowNull": false,
+                "defaultValue": "0.00000000",
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": false
+                }
+            },
+            {
+                "name": "min_withdrawal_amount",
+                "verbose": "最低提现数",
+                "control": {
+                    "text": true
+                },
+                "type": "decimal(19,8)",
+                "allowNull": false,
+                "defaultValue": "0.001",
                 "listview": {
                     "show": true
                 },
@@ -584,7 +616,7 @@
                 "control": {
                     "number": true
                 },
-                "type": "int(11)",
+                "type": "smallint(6)",
                 "allowNull": false,
                 "defaultValue": "900",
                 "listview": {
@@ -688,7 +720,7 @@
                 "allowNull": false,
                 "defaultValue": null,
                 "listview": {
-                    "show": true
+                    "show": false
                 },
                 "editview": {
                     "show": true
@@ -711,8 +743,8 @@
                 }
             },
             {
-                "name": "bitcoin_address",
-                "verbose": "比特币地址",
+                "name": "address",
+                "verbose": "提现地址",
                 "control": {
                     "text": true
                 },
@@ -728,7 +760,7 @@
             },
             {
                 "name": "amount",
-                "verbose": "提现数额(聪)",
+                "verbose": "提现数额",
                 "control": {
                     "text": true
                 },
@@ -759,7 +791,7 @@
                 }
             },
             {
-                "name": "transaction_hash",
+                "name": "transaction_id",
                 "verbose": "交易Hash",
                 "control": {
                     "text": true
