@@ -45,8 +45,8 @@
                 "control": {
                     "text": true
                 },
-                "type": "decimal(4,4)",
-                "allowNull": false,
+                "type": "decimal(5,4)",
+                "allowNull": true,
                 "defaultValue": null,
                 "listview": {
                     "show": true
