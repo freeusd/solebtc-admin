@@ -232,8 +232,11 @@
             "show": true
         },
         "listview": {
-            "order": {},
-            "page": 25
+            "order": {
+                "created_at": "desc"
+            },
+            "filter": ["id", "user_id", "referer_id", "type", "income", "referer_income", "created_at"],
+            "page": 50
         },
         "editview": {
             "readonly": true
@@ -440,8 +443,12 @@
             "show": true
         },
         "listview": {
-            "order": {},
-            "page": 25
+            "order": {
+                "created_at": "desc",
+                "total": "desc"
+            },
+            "filter": ["total", "created_at"],
+            "page": 50
         },
         "editview": {
             "readonly": true
@@ -695,8 +702,26 @@
             "show": true
         },
         "listview": {
-            "order": {},
-            "page": 25
+            "order": {
+                "created_at": "desc",
+                "total_income": "desc"
+            },
+            "filter": [
+                "id",
+                "email", 
+                "address", 
+                "status", 
+                "balance", 
+                "total_income", 
+                "total_income_from_referees", 
+                "min_withdrawal_amount",
+                "reward_interval", 
+                "rewarded_at",
+                "referer_id",
+                "updated_at",
+                "created_at"
+            ],
+            "page": 50
         },
         "editview": {
             "readonly": false
@@ -843,8 +868,11 @@
             "show": true
         },
         "listview": {
-            "order": {},
-            "page": 25
+            "order": {
+                "created_at": "desc"
+            },
+            "filter": ["id", "user_id", "address", "amount", "status", "transaction_id", "updated_at", "created_at"],
+            "page": 50
         },
         "editview": {
             "readonly": true
