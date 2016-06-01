@@ -1,4 +1,4 @@
-solebtc-admin
+sole-admin
 ===
 
 How to deploy
