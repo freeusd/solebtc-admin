@@ -507,7 +507,7 @@
                     "show": true
                 },
                 "editview": {
-                    "show": false
+                    "show": true
                 }
             },
             {
