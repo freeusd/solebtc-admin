@@ -56,6 +56,48 @@
                 }
             },
             {
+                "name": "double_on_weekday",
+                "verbose": "哪一天双倍",
+                "control": {
+                    "select": true,
+                    "options": [
+                        {
+                            "-1": "无双倍"
+                        },
+                        {
+                            "0": "周日"
+                        },
+                        {
+                            "1": "周一"
+                        },
+                        {
+                            "2": "周二"
+                        },
+                        {
+                            "3": "周三"
+                        },
+                        {
+                            "4": "周四"
+                        },
+                        {
+                            "5": "周五"
+                        },
+                        {
+                            "6": "周六"
+                        }
+                    ]
+                },
+                "type": "tinyint(4)",
+                "allowNull": false,
+                "defaultValue": "-1",
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
                 "name": "updated_at",
                 "verbose": "updated_at",
                 "control": {
@@ -235,7 +277,15 @@
             "order": {
                 "created_at": "desc"
             },
-            "filter": ["id", "user_id", "referer_id", "type", "income", "referer_income", "created_at"],
+            "filter": [
+                "id",
+                "user_id",
+                "referer_id",
+                "type",
+                "income",
+                "referer_income",
+                "created_at"
+            ],
             "page": 50
         },
         "editview": {
@@ -447,7 +497,10 @@
                 "created_at": "desc",
                 "total": "desc"
             },
-            "filter": ["total", "created_at"],
+            "filter": [
+                "total",
+                "created_at"
+            ],
             "page": 50
         },
         "editview": {
@@ -708,14 +761,14 @@
             },
             "filter": [
                 "id",
-                "email", 
-                "address", 
-                "status", 
-                "balance", 
-                "total_income", 
-                "total_income_from_referees", 
+                "email",
+                "address",
+                "status",
+                "balance",
+                "total_income",
+                "total_income_from_referees",
                 "min_withdrawal_amount",
-                "reward_interval", 
+                "reward_interval",
                 "rewarded_at",
                 "referer_id",
                 "updated_at",
@@ -871,7 +924,16 @@
             "order": {
                 "created_at": "desc"
             },
-            "filter": ["id", "user_id", "address", "amount", "status", "transaction_id", "updated_at", "created_at"],
+            "filter": [
+                "id",
+                "user_id",
+                "address",
+                "amount",
+                "status",
+                "transaction_id",
+                "updated_at",
+                "created_at"
+            ],
             "page": 50
         },
         "editview": {
