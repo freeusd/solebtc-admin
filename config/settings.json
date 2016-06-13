@@ -98,6 +98,22 @@
                 }
             },
             {
+                "name": "min_withdrawal_amount",
+                "verbose": "最低提现数",
+                "control": {
+                    "text": true
+                },
+                "type": "decimal(19,8)",
+                "allowNull": false,
+                "defaultValue": "99999999999.99999900",
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
                 "name": "updated_at",
                 "verbose": "updated_at",
                 "control": {
