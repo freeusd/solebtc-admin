@@ -1346,5 +1346,146 @@
         "editview": {
             "readonly": true
         }
+    },
+    "superrewards": {
+        "slug": "superrewards",
+        "table": {
+            "name": "superrewards",
+            "pk": "id",
+            "verbose": "superrewards"
+        },
+        "columns": [
+            {
+                "name": "id",
+                "verbose": "id",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "income_id",
+                "verbose": "income_id",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "user_id",
+                "verbose": "user_id",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "transaction_id",
+                "verbose": "transaction_id",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(255)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "offer_id",
+                "verbose": "offer_id",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(127)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "amount",
+                "verbose": "amount",
+                "control": {
+                    "text": true
+                },
+                "type": "decimal(19,8)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "created_at",
+                "verbose": "created_at",
+                "control": {
+                    "text": true
+                },
+                "type": "datetime",
+                "allowNull": false,
+                "defaultValue": "CURRENT_TIMESTAMP",
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            }
+        ],
+        "mainview": {
+            "show": true
+        },
+        "listview": {
+            "order": {
+                "created_at": "desc"
+            },
+            "filter": [
+                "id",
+                "income_id",
+                "user_id",
+                "transaction_id",
+                "offer_id"
+            ],
+            "page": 50
+        },
+        "editview": {
+            "readonly": true 
+        }
     }
 }
