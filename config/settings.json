@@ -161,7 +161,10 @@
         "slug": "incomes",
         "table": {
             "name": "incomes",
-            "pk": "id",
+            "pk": [
+                "id",
+                "user_id"
+            ],
             "verbose": "用户收入"
         },
         "columns": [
@@ -1485,7 +1488,7 @@
             "page": 50
         },
         "editview": {
-            "readonly": true 
+            "readonly": true
         }
     }
 }
